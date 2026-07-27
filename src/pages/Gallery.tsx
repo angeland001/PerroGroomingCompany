@@ -10,12 +10,12 @@ const GRADIENTS = ['rose-coral', 'coral-orange', 'orange-amber', 'amber-gold'] a
 const photos = [
   { id: 'gal-1', name: 'Biscuit', service: 'full groom', ratio: '3/4', src: '/assets/gallery/biscuit.jpg' },
   { id: 'gal-2', name: 'Luna', service: 'de-shed', ratio: '3/4.4', src: '/assets/gallery/luna.jpg' },
-  { id: 'gal-3', name: 'Moose', service: 'bath & brush', ratio: '3/4', src: '/assets/gallery/moose.jpg' },
+  { id: 'gal-3', name: 'Terrier', service: 'full groom', ratio: '3/4', src: '/assets/gallery/real-terrier.jpg' },
   { id: 'gal-4', name: 'Pepper', service: 'puppy groom', ratio: '3/4.4', src: '/assets/gallery/pepper.jpg' },
   { id: 'gal-5', name: 'Winston', service: 'full groom', ratio: '3/4.4', src: '/assets/gallery/winston.jpg' },
-  { id: 'gal-6', name: 'Daisy', service: 'de-shed', ratio: '3/4', src: '/assets/gallery/daisy.jpg' },
+  { id: 'gal-6', name: 'Toy Poodle', service: 'puppy groom', ratio: '3/4', src: '/assets/gallery/real-poodle.jpg' },
   { id: 'gal-7', name: 'Rufus', service: 'puppy groom', ratio: '3/4.4', src: '/assets/gallery/rufus.jpg' },
-  { id: 'gal-8', name: 'Olive', service: 'teeth & nails', ratio: '3/4', src: '/assets/gallery/olive.jpg' },
+  { id: 'gal-8', name: 'Cocker Spaniel', service: 'full groom', ratio: '3/4.4', src: '/assets/gallery/real-cocker-spaniel.jpg' },
 ]
 
 export default function Gallery() {
@@ -44,6 +44,7 @@ export default function Gallery() {
                     alt={`${photo.name} — ${photo.service}`}
                     label={`${photo.name} — ${photo.service}`}
                     src={photo.src}
+                    style={photo.id === 'gal-3' ? { objectPosition: '100% center' } : undefined}
                   />
                 </div>
                 <span className="gallery-card__label">

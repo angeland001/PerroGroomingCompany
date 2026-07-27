@@ -73,9 +73,9 @@ export default function About() {
             <div className="about-hero__image">
               <PlaceholderImage
                 gradient="amber-gold"
-                alt="Groomer at work"
+                alt="Perro groomer holding a freshly groomed schnauzer"
                 label="Photo of your groomer at work"
-                src="/assets/gallery/groomer-at-work.jpg"
+                src="/assets/real-about-hero.jpg"
               />
             </div>
             <span className="about-hero__badge">Certified · Insured · Dog-obsessed</span>
