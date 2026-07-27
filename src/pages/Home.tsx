@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
 import CTABanner from '../components/CTABanner'
+import CurvedLoop from '../components/CurvedLoop'
 import ServiceIcon from '../components/ServiceIcon'
 import PlaceholderImage from '../components/PlaceholderImage'
 import { services } from '../data/services'
@@ -130,6 +131,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <CurvedLoop
+          marqueeText="No car rides, no cages   ·   Spa-day grooming, at your home   ·   Chattanooga's mobile groomer   ·   "
+          speed={1.2}
+          curveAmount={200}
+          className="why-strip__marquee-text"
+        />
       </section>
 
       <section className="section section--card">

@@ -64,6 +64,8 @@
   font-size: var(--text-sm);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
   transition: transform var(--duration-fast) var(--ease-organic), background-color var(--duration-fast) var(--ease-organic);
 }
 
@@ -84,4 +86,16 @@
 .cta-banner__call:hover {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
+}
+
+@media (max-width: 640px) {
+  .cta-banner--split {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 40px 32px;
+  }
+  .cta-banner--split .cta-banner__actions {
+    justify-content: center;
+  }
 }

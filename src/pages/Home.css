@@ -119,6 +119,9 @@
 .why-strip {
   padding: 56px 56px 72px;
 }
+.why-strip .curved-loop-jacket {
+  margin-top: 40px;
+}
 .why-strip__grid {
   max-width: 1160px;
   margin: 0 auto;
@@ -148,6 +151,10 @@
   color: var(--text-secondary);
   margin: 0;
   line-height: var(--leading-relaxed);
+}
+
+.why-strip__marquee-text {
+  fill: var(--color-rose-600) !important;
 }
 
 .section {
