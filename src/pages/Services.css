@@ -1,0 +1,126 @@
+.page-hero--services {
+  padding-bottom: 72px;
+}
+
+.services-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.services-head__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.services-head h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  color: var(--text-foreground);
+  font-weight: 500;
+  margin: 0;
+}
+.services-head h1 i {
+  color: var(--color-orange-500);
+}
+.services-head p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+.service-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.service-row {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 22px 28px;
+  display: grid;
+  grid-template-columns: 52px 1fr auto auto;
+  gap: 22px;
+  align-items: center;
+}
+.service-row__icon {
+  width: 52px;
+  height: 52px;
+}
+.service-row__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.service-row__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  color: var(--text-foreground);
+}
+.service-row__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.service-row__duration {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-style: italic;
+}
+.service-row__price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-rose-600);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .service-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .service-row__icon {
+    margin-bottom: 4px;
+  }
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.note-card {
+  background: var(--surface-muted);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.note-card__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: var(--color-gold-300);
+}
+.note-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+.note-card b {
+  font-family: var(--font-heading);
+  color: var(--text-foreground);
+}
+
+.cta-section {
+  padding: 0 56px 72px;
+}

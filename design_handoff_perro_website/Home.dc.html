@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/typography.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/colors.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/radius.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/base.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/styles.css">
+<script src="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>html{scroll-behavior:smooth}body{margin:0;background:var(--surface-background)}a{color:var(--color-rose-600)}a:hover{color:#C01D58}</style>
+</helmet>
+<div style="position:relative;min-height:100vh;font-family:var(--font-body)" data-screen-label="Home">
+<div class="grain-overlay" style="position:fixed;inset:0;pointer-events:none;z-index:60"></div>
+<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 40px;background:var(--surface-card);box-shadow:var(--shadow-sm)">
+  <a href="Home.dc.html" style="flex-shrink:0;transition:transform .3s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(0.96)"><img src="assets/perro-logo-horizontal.png" alt="Perro Grooming Co. — home" style="height:58px;width:auto;display:block"></a>
+  <nav style="display:flex;gap:26px;flex-wrap:wrap;font-family:var(--font-heading);font-weight:500;font-size:var(--text-sm)">
+    <a href="Home.dc.html" style="color:var(--text-foreground);text-decoration:none;border-bottom:2px solid var(--color-rose-600);padding-bottom:2px">Home</a>
+    <a href="Services.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Services</a>
+    <a href="Gallery.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Gallery</a>
+    <a href="About.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">About</a>
+    <a href="Contact.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Contact</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+    <a href="tel:+14235550134" style="border:1px solid var(--border-default);border-radius:var(--radius-full);padding:10px 20px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground);text-decoration:none;white-space:nowrap" style-hover="border-color:var(--color-rose-600);color:var(--color-rose-600)">(423) 555-0134</a>
+    <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="primary" size="md" hint-size="120px,44px">Book Now</x-import></a>
+  </div>
+</header>
+<div style="position:relative;padding:48px 56px 72px;overflow:hidden">
+  <div style="position:absolute;inset:0;background:var(--gradient-sunset-full);opacity:0.12"></div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:48px;align-items:center;max-width:1160px;margin:0 auto">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:26px">
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,5vw,var(--text-6xl));line-height:var(--leading-tight);color:var(--text-foreground);margin:0;font-weight:500;text-wrap:pretty">Spa-day grooming,<br><span style="color:var(--color-orange-500);font-style:italic">at your home</span></h1>
+      <p style="font-size:var(--text-lg);color:var(--text-secondary);margin:0;max-width:440px;line-height:var(--leading-relaxed)">We come to you — inside or in the backyard — serving <i>Chattanooga, Hixson, Red Bank &amp; Hamilton</i>.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="primary" size="lg" hint-size="220px,52px">Book with Square Go</x-import></a>
+        <a href="Services.dc.html" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="secondary" size="lg" hint-size="180px,52px">See Services</x-import></a>
+      </div>
+      <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:18px 22px;display:flex;gap:14px;align-items:flex-start;max-width:420px">
+        <div style="width:44px;height:44px;flex-shrink:0"><image-slot id="home-quote-dog" shape="circle" placeholder="dog"></image-slot></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <p style="font-style:italic;font-size:var(--text-sm);color:var(--text-secondary);margin:0">“Biscuit gets nervous in cars — having Perro come to our porch changed everything.”</p>
+          <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);color:var(--text-foreground);margin:0">Kristin R., Red Bank ★★★★★</p>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;min-width:0">
+      <div style="position:relative;width:100%;aspect-ratio:1/1;border-radius:var(--radius-arch);background:var(--gradient-coral-orange);box-shadow:var(--shadow-xl)">
+        <img src="assets/puppy-hero.png" alt="Freshly groomed puppy" style="position:absolute;left:50%;top:-6%;height:118%;width:auto;max-width:none;transform:translateX(-50%) rotate(3deg);filter:drop-shadow(0 24px 20px rgba(43,29,27,0.25))">
+      </div>
+      <span style="position:absolute;top:22px;left:-14px;background:var(--surface-card);box-shadow:var(--shadow-md);border-radius:var(--radius-full);padding:12px 20px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground)">4.9 ★ · 120 reviews</span>
+    </div>
+  </div>
+</div>
+<div style="padding:56px 56px 72px" data-screen-label="Why in-home">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="width:48px;height:48px;flex-shrink:0;border-radius:var(--radius-full);background:var(--color-gold-300);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a4a1f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 9.5V21h14V9.5"></path></svg></span>
+      <div><h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0 0 6px">No car rides, no cages</h3><p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Your dog stays right where they feel happiest — indoors or in the backyard.</p></div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="width:48px;height:48px;flex-shrink:0;border-radius:var(--radius-full);background:var(--color-gold-300);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a4a1f" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg></span>
+      <div><h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0 0 6px">One-on-one, start to finish</h3><p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">One groomer, one dog, full attention — no waiting in a queue of kennels.</p></div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="width:48px;height:48px;flex-shrink:0;border-radius:var(--radius-full);background:var(--color-gold-300);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a4a1f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+      <div><h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0 0 6px">All over greater Chattanooga</h3><p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Chattanooga, Hixson &amp; Red Bank included; Hamilton for a small travel fee.</p></div>
+    </div>
+  </div>
+</div>
+<div style="padding:72px 56px;background:var(--surface-card)" data-screen-label="Services teaser">
+  <div style="max-width:1160px;margin:0 auto">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">Our Services</span>
+      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);color:var(--text-foreground);margin:0;font-weight:500">Everything your dog needs, <i style="color:var(--color-orange-500)">delivered</i></h2>
+      <p style="font-size:var(--text-base);color:var(--text-secondary);margin:0">Six services, one doorstep — yours.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      <a href="Services.dc.html" style="text-decoration:none;background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .5s cubic-bezier(0.22,1,0.36,1),box-shadow .5s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-4px);box-shadow:var(--shadow-md)">
+        <span style="width:52px;height:52px;border-radius:var(--radius-full);background:var(--color-rose-600);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M8.5 8.5L20 20M8.5 15.5L20 4"></path></svg></span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-lg);color:var(--text-foreground);margin:0">Full Groom</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Bath, blow-dry, haircut styled to breed, nails, ears &amp; cologne.</p>
+        <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--color-rose-600)">from $85 →</span>
+      </a>
+      <a href="Services.dc.html" style="text-decoration:none;background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .5s cubic-bezier(0.22,1,0.36,1),box-shadow .5s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-4px);box-shadow:var(--shadow-md)">
+        <span style="width:52px;height:52px;border-radius:var(--radius-full);background:var(--color-orange-500);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4.5-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-3-6.5-6-11z"></path></svg></span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-lg);color:var(--text-foreground);margin:0">Bath &amp; Brush</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Warm bath, conditioner, blow-dry and a thorough brush-out.</p>
+        <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--color-rose-600)">from $55 →</span>
+      </a>
+      <a href="Services.dc.html" style="text-decoration:none;background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px;transition:transform .5s cubic-bezier(0.22,1,0.36,1),box-shadow .5s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-4px);box-shadow:var(--shadow-md)">
+        <span style="width:52px;height:52px;border-radius:var(--radius-full);background:var(--color-amber-400);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13" r="4"></circle><circle cx="5.5" cy="8" r="2"></circle><circle cx="10" cy="4.5" r="2"></circle><circle cx="14.5" cy="4.5" r="2"></circle><circle cx="19" cy="8" r="2"></circle></svg></span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-lg);color:var(--text-foreground);margin:0">Puppy First Groom</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">A gentle, treat-filled introduction for pups under 6 months.</p>
+        <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--color-rose-600)">from $50 →</span>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:32px"><a href="Services.dc.html" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="secondary" size="md" hint-size="220px,44px">All Services &amp; Pricing</x-import></a></div>
+  </div>
+</div>
+<div style="padding:72px 56px" data-screen-label="Gallery teaser">
+  <div style="max-width:1160px;margin:0 auto">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">Fresh Cuts</span>
+      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);color:var(--text-foreground);margin:0;font-weight:500">Recent <i style="color:var(--color-orange-500)">good boys &amp; girls</i></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+        <div style="width:100%;aspect-ratio:3/4;border-radius:var(--radius-arch);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--gradient-rose-coral)"><image-slot id="home-g1" shape="rect" placeholder="Biscuit — full groom"></image-slot></div>
+        <span style="background:var(--surface-card);box-shadow:var(--shadow-sm);border-radius:var(--radius-full);padding:6px 16px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground)">Biscuit</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+        <div style="width:100%;aspect-ratio:3/4.4;border-radius:var(--radius-arch);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--gradient-coral-orange)"><image-slot id="home-g2" shape="rect" placeholder="Luna — de-shed"></image-slot></div>
+        <span style="background:var(--surface-card);box-shadow:var(--shadow-sm);border-radius:var(--radius-full);padding:6px 16px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground)">Luna</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+        <div style="width:100%;aspect-ratio:3/4;border-radius:var(--radius-arch);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--gradient-orange-amber)"><image-slot id="home-g3" shape="rect" placeholder="Moose — bath &amp; brush"></image-slot></div>
+        <span style="background:var(--surface-card);box-shadow:var(--shadow-sm);border-radius:var(--radius-full);padding:6px 16px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground)">Moose</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+        <div style="width:100%;aspect-ratio:3/4.4;border-radius:var(--radius-arch);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--gradient-amber-gold)"><image-slot id="home-g4" shape="rect" placeholder="Pepper — puppy groom"></image-slot></div>
+        <span style="background:var(--surface-card);box-shadow:var(--shadow-sm);border-radius:var(--radius-full);padding:6px 16px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground)">Pepper</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px"><a href="Gallery.dc.html" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="secondary" size="md" hint-size="180px,44px">See Full Gallery</x-import></a></div>
+  </div>
+</div>
+<div style="padding:72px 56px;background:var(--surface-card)" data-screen-label="Testimonials">
+  <div style="max-width:1160px;margin:0 auto">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">Testimonials</span>
+      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);color:var(--text-foreground);margin:0;font-weight:500">Tails are <i style="color:var(--color-orange-500)">wagging</i></h2>
+      <p style="font-size:var(--text-base);color:var(--text-secondary);margin:0">Real notes from dog parents across Chattanooga.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      <article style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:14px;align-items:center">
+          <div style="width:56px;height:56px;flex-shrink:0"><image-slot id="home-t1" shape="circle" placeholder="Winston"></image-slot></div>
+          <div><p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">Winston</p><p style="font-size:var(--text-sm);color:var(--text-muted);margin:0;font-style:italic">Doodle · Hixson</p></div>
+        </div>
+        <p style="font-style:italic;font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">“Winston used to shake at the shop. Now he waits at the window for the Perro van. The backyard setup is genius.”</p>
+        <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);color:var(--text-foreground);margin:0">— Maria T. ★★★★★</p>
+      </article>
+      <article style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:14px;align-items:center">
+          <div style="width:56px;height:56px;flex-shrink:0"><image-slot id="home-t2" shape="circle" placeholder="Daisy"></image-slot></div>
+          <div><p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">Daisy</p><p style="font-size:var(--text-sm);color:var(--text-muted);margin:0;font-style:italic">Husky mix · Chattanooga</p></div>
+        </div>
+        <p style="font-style:italic;font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">“The de-shed treatment is life-changing. Our couch has never been this fur-free, and Daisy loved every minute.”</p>
+        <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);color:var(--text-foreground);margin:0">— James &amp; Priya K. ★★★★★</p>
+      </article>
+      <article style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:14px;align-items:center">
+          <div style="width:56px;height:56px;flex-shrink:0"><image-slot id="home-t3" shape="circle" placeholder="Rufus"></image-slot></div>
+          <div><p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">Rufus</p><p style="font-size:var(--text-sm);color:var(--text-muted);margin:0;font-style:italic">Shih Tzu · Hamilton</p></div>
+        </div>
+        <p style="font-style:italic;font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">“Rufus's first groom ever and not a single whimper. Patient, gentle, and he came out looking like a teddy bear.”</p>
+        <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);color:var(--text-foreground);margin:0">— Anthony B. ★★★★★</p>
+      </article>
+    </div>
+  </div>
+</div>
+<div style="padding:72px 56px" data-screen-label="CTA banner">
+  <div style="max-width:1160px;margin:0 auto;position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-rose-600);padding:56px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px;box-shadow:var(--shadow-lg)">
+    <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);color:#fff;margin:0;font-weight:500;text-wrap:pretty">Ready for a fresh cut — without leaving home?</h2>
+    <p style="font-size:var(--text-base);color:rgba(255,255,255,.9);margin:0">Mon–Fri 8am–6pm · Sat 9am–4pm · Book online or give us a call.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none;background:#fff;color:var(--color-rose-600);border-radius:var(--radius-full);padding:14px 30px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);letter-spacing:.08em;text-transform:uppercase;transition:transform .3s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:translateY(-1px)">Book on Square Go</a>
+      <a href="tel:+14235550134" style="text-decoration:none;border:2px solid rgba(255,255,255,.8);color:#fff;border-radius:var(--radius-full);padding:12px 30px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);letter-spacing:.08em;text-transform:uppercase" style-hover="background:rgba(255,255,255,.15)">Call (423) 555-0134</a>
+    </div>
+  </div>
+</div>
+<footer style="background:var(--text-foreground);color:var(--surface-background);padding:56px 56px 28px">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <p style="font-family:var(--font-display);font-size:var(--text-2xl);margin:0;line-height:1.1">Perro<br><span style="font-size:var(--text-base);letter-spacing:.14em;text-transform:uppercase;font-family:var(--font-heading);font-weight:600;color:var(--color-amber-400)">Grooming Co.</span></p>
+      <p style="font-size:var(--text-sm);color:rgba(255,246,235,.7);margin:0;line-height:var(--leading-relaxed)">Mobile dog grooming across greater Chattanooga — right where your dog feels happiest.</p>
+      <a href="https://instagram.com/perrogroomingco" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:var(--color-amber-400);text-decoration:none;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm)" style-hover="color:var(--color-gold-300)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg>@perrogroomingco</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Explore</p>
+      <a href="Home.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Home</a>
+      <a href="Services.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Services &amp; Pricing</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Gallery</a>
+      <a href="About.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">About</a>
+      <a href="Contact.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Contact &amp; Areas</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Hours</p>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:var(--text-sm);color:rgba(255,246,235,.85)"><span>Mon – Fri</span><span>8:00 am – 6:00 pm</span><span>Saturday</span><span>9:00 am – 4:00 pm</span><span>Sunday</span><span style="font-style:italic">Closed</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Service Area</p>
+      <p style="font-size:var(--text-sm);color:rgba(255,246,235,.85);margin:0;line-height:var(--leading-relaxed)">Chattanooga · Hixson · Red Bank<br>Hamilton (+$15 travel fee)<br><i>Outside these areas? A travel fee applies — call us.</i></p>
+      <a href="tel:+14235550134" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">(423) 555-0134</a>
+      <a href="mailto:hello@perrogrooming.co" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">hello@perrogrooming.co</a>
+    </div>
+  </div>
+  <p style="max-width:1160px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(255,246,235,.15);font-size:var(--text-xs);color:rgba(255,246,235,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>© 2026 Perro Grooming Co. · Chattanooga, TN</span><span>Booking powered by Square Go</span></p>
+</footer>
+</div>
+</x-dc>
+</body>
+</html>

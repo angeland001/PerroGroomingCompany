@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/typography.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/colors.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/radius.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/base.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/styles.css">
+<script src="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<script src="perro-map.js"></script>
+<style>html{scroll-behavior:smooth}body{margin:0;background:var(--surface-background)}a{color:var(--color-rose-600)}a:hover{color:#C01D58}</style>
+</helmet>
+<div style="position:relative;min-height:100vh;font-family:var(--font-body)" data-screen-label="Contact">
+<div class="grain-overlay" style="position:fixed;inset:0;pointer-events:none;z-index:60"></div>
+<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 40px;background:var(--surface-card);box-shadow:var(--shadow-sm)">
+  <a href="Home.dc.html" style="flex-shrink:0;transition:transform .3s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(0.96)"><img src="assets/perro-logo-horizontal.png" alt="Perro Grooming Co. — home" style="height:58px;width:auto;display:block"></a>
+  <nav style="display:flex;gap:26px;flex-wrap:wrap;font-family:var(--font-heading);font-weight:500;font-size:var(--text-sm)">
+    <a href="Home.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Home</a>
+    <a href="Services.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Services</a>
+    <a href="Gallery.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Gallery</a>
+    <a href="About.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">About</a>
+    <a href="Contact.dc.html" style="color:var(--text-foreground);text-decoration:none;border-bottom:2px solid var(--color-rose-600);padding-bottom:2px">Contact</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+    <a href="tel:+14235550134" style="border:1px solid var(--border-default);border-radius:var(--radius-full);padding:10px 20px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground);text-decoration:none;white-space:nowrap" style-hover="border-color:var(--color-rose-600);color:var(--color-rose-600)">(423) 555-0134</a>
+    <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="primary" size="md" hint-size="120px,44px">Book Now</x-import></a>
+  </div>
+</header>
+<div style="position:relative;padding:56px;overflow:hidden">
+  <div style="position:absolute;inset:0;background:var(--color-gold-300);opacity:0.2"></div>
+  <div style="position:relative;max-width:1100px;margin:0 auto">
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px;text-align:center">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">Contact &amp; Service Area</span>
+      <h1 style="font-family:var(--font-display);font-size:var(--text-5xl);color:var(--text-foreground);margin:0;font-weight:500">We're probably <i style="color:var(--color-orange-500)">already nearby</i></h1>
+      <p style="font-size:var(--text-base);color:var(--text-secondary);margin:0;max-width:560px;align-self:center;line-height:var(--leading-relaxed)">Perro is fully mobile — there's no shop to visit. Check the map to see if your neighborhood is covered, then book or call.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;align-items:stretch">
+      <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);min-height:460px;position:relative;z-index:1">
+        <x-import component-from-global-scope="perro-map" style="position:absolute;inset:0" hint-size="100%,460px"></x-import>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px 28px;display:flex;flex-direction:column;gap:14px">
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-orange-500);margin:0">Where we go</h2>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:var(--text-sm);color:var(--text-secondary)">
+            <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Chattanooga</span><span>no travel fee</span></div>
+            <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Red Bank</span><span>no travel fee</span></div>
+            <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Hixson</span><span>no travel fee</span></div>
+            <div style="display:flex;justify-content:space-between;gap:12px"><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Hamilton</span><span style="color:var(--color-orange-500);font-weight:600">+$15 travel fee</span></div>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--text-muted);margin:0;font-style:italic">Outside these areas — or outside Chattanooga entirely? We can often still make it work: a travel fee is assessed based on distance. Call us for a quote.</p>
+        </div>
+        <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px 28px;display:flex;flex-direction:column;gap:12px">
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-orange-500);margin:0">Get in touch</h2>
+          <a href="tel:+14235550134" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text-foreground);font-family:var(--font-heading);font-weight:600;font-size:var(--text-base)" style-hover="color:var(--color-rose-600)"><span style="width:38px;height:38px;border-radius:var(--radius-full);background:var(--color-gold-300);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8a4a1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .8 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.9.7 2.9.8a2 2 0 0 1 1.6 2z"></path></svg></span>(423) 555-0134</a>
+          <a href="mailto:hello@perrogrooming.co" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text-foreground);font-family:var(--font-heading);font-weight:600;font-size:var(--text-base)" style-hover="color:var(--color-rose-600)"><span style="width:38px;height:38px;border-radius:var(--radius-full);background:var(--color-gold-300);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8a4a1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="M2 7l10 6 10-6"></path></svg></span>hello@perrogrooming.co</a>
+          <a href="https://instagram.com/perrogroomingco" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text-foreground);font-family:var(--font-heading);font-weight:600;font-size:var(--text-base)" style-hover="color:var(--color-rose-600)"><span style="width:38px;height:38px;border-radius:var(--radius-full);background:var(--color-gold-300);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8a4a1f" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#8a4a1f" stroke="none"></circle></svg></span>@perrogroomingco</a>
+        </div>
+        <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px 28px;display:flex;flex-direction:column;gap:12px">
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-orange-500);margin:0">Hours</h2>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:8px 24px;font-size:var(--text-sm);color:var(--text-secondary)"><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Mon – Fri</span><span>8:00 am – 6:00 pm</span><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Saturday</span><span>9:00 am – 4:00 pm</span><span style="font-family:var(--font-heading);font-weight:600;color:var(--text-foreground)">Sunday</span><span style="font-style:italic">Closed</span></div>
+          <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none;margin-top:4px"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="primary" size="md" hint-size="190px,44px">Book on Square Go</x-import></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer style="background:var(--text-foreground);color:var(--surface-background);padding:56px 56px 28px">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <p style="font-family:var(--font-display);font-size:var(--text-2xl);margin:0;line-height:1.1">Perro<br><span style="font-size:var(--text-base);letter-spacing:.14em;text-transform:uppercase;font-family:var(--font-heading);font-weight:600;color:var(--color-amber-400)">Grooming Co.</span></p>
+      <p style="font-size:var(--text-sm);color:rgba(255,246,235,.7);margin:0;line-height:var(--leading-relaxed)">Mobile dog grooming across greater Chattanooga — right where your dog feels happiest.</p>
+      <a href="https://instagram.com/perrogroomingco" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:var(--color-amber-400);text-decoration:none;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm)" style-hover="color:var(--color-gold-300)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg>@perrogroomingco</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Explore</p>
+      <a href="Home.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Home</a>
+      <a href="Services.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Services &amp; Pricing</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Gallery</a>
+      <a href="About.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">About</a>
+      <a href="Contact.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Contact &amp; Areas</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Hours</p>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:var(--text-sm);color:rgba(255,246,235,.85)"><span>Mon – Fri</span><span>8:00 am – 6:00 pm</span><span>Saturday</span><span>9:00 am – 4:00 pm</span><span>Sunday</span><span style="font-style:italic">Closed</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Service Area</p>
+      <p style="font-size:var(--text-sm);color:rgba(255,246,235,.85);margin:0;line-height:var(--leading-relaxed)">Chattanooga · Hixson · Red Bank<br>Hamilton (+$15 travel fee)<br><i>Outside these areas? A travel fee applies — call us.</i></p>
+      <a href="tel:+14235550134" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">(423) 555-0134</a>
+      <a href="mailto:hello@perrogrooming.co" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">hello@perrogrooming.co</a>
+    </div>
+  </div>
+  <p style="max-width:1160px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(255,246,235,.15);font-size:var(--text-xs);color:rgba(255,246,235,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>© 2026 Perro Grooming Co. · Chattanooga, TN</span><span>Booking powered by Square Go</span></p>
+</footer>
+</div>
+</x-dc>
+</body>
+</html>

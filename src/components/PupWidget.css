@@ -1,0 +1,154 @@
+/* Decorative full-screen companion, ported from https://codepen.io/Ma5a/pen/MWBGbOb (Masahito Leo Takeuchi).
+   Sprite art and animation-frame math are reused as supplied; positioning/eventing were
+   adapted (position: fixed + pointer-events: none) so it sits in one fixed spot on the
+   page without ever intercepting clicks meant for real site controls, and sits below the
+   sticky header. It only turns in place to face the cursor — it never relocates.
+
+   Each sprite part is split into three layers — window (clips, never transformed) >
+   flip (mirrors left-facing frames) > sprite (slides the frame into view) — because
+   putting the clip and the mirror transform on the same element caused the head to
+   flicker out of view mid-turn on diagonal frames in some browsers. */
+
+.pup-widget {
+  position: fixed;
+  left: 24px;
+  top: 8px;
+  width: calc(2 * 48px);
+  height: calc(2 * 48px);
+  pointer-events: none;
+  z-index: 40; /* below site-header (50) and grain-overlay (60) */
+  transition: 0.5s;
+  animation: pup-fade-in forwards 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pup-widget {
+    display: none;
+  }
+}
+
+@keyframes pup-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.pup-widget__img-bg {
+  image-rendering: pixelated;
+  background-repeat: no-repeat !important;
+}
+
+.pup-widget__leg-wrapper {
+  position: absolute;
+  width: calc(2 * 8px);
+  height: calc(2 * 12px);
+  transition: 0.15s;
+}
+
+.pup-widget__leg {
+  position: absolute;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAYAAABfnvydAAAAAXNSR0IArs4c6QAAAElJREFUKFNjZICC/////4exQTQjIyMjmAYR6JIwhSBFjLMiLP6nLj+OrBnOnh1pyTBSFIA8jS0sQGGQtuIEJDhhipBDCyQJ4gMALug8VaRjkWwAAAAASUVORK5CYII=);
+  width: calc(2 * 8px);
+  height: calc(2 * 12px);
+  background-size: calc(2 * 8px) calc(2 * 12px) !important;
+  transition: 0.15s;
+}
+
+.pup-widget__body-window {
+  position: absolute;
+  width: calc(2 * 48px);
+  height: calc(2 * 48px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pup-widget__body-flip {
+  position: absolute;
+  inset: 0;
+}
+
+.pup-widget__body {
+  position: absolute;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAAAwCAYAAACxIqevAAAAAXNSR0IArs4c6QAABSpJREFUeF7tm32a1CAMxqe30pvoAfRQegC9id5qfPBZlGELJOQL2nf/2t0pkPySvA20czzwAwIgAAJBBI6gdbEsCIAACDwgQEgCEACBMAIQoDD0WBgEQAAChBwAARB4fPv04UnF8PXnbzXdUJuIajyuAwEQWINAKTpffvwiG/X988d/10rFCAJExo4LQeA6BJL4cESn5XkSI4kIQYCuk1PwBARIBLTEJy8mESEIEClkuAgErkFAW3ykIgQBukZewQsQIBGAAJEw4SIQAAFtAlbiI+mC0AFpRxnzgcCiBCBAiwYGZvkRGL1vInmi4ufFnitBgPaMG6xWIJCFZ/ToN79jAiFSgF5N8Xw+yS8bzq5+HAdrV8W6eNYojLsvAarw1IQ0X3a7L/1XzyFAyIRbEdBq+dEVydNGKxYjS7jvBKEDGhHF59MEtO+4EKLpUPz9rtdo+zs/+/+RECANiphDTEBbfEqDIoQoFfDZudTZ/3vXZj/quVpjxIF4m+DyAjR6ulGDXPWQkerHqvZrJaxknlWTXepTGl/GPedK/b/0dy0oPYHJn1mK0KoxEW3BZr9NmwK5wiGjxP6czBF3Y0kheYz1SvacRx43g1okzkRjJDo9wcpxsRIhr5i4bcE0HeIaLS2i2SczvXU9faB2aT17LYvWcvt15pMH+1IYer9TOv16PGWMJOc1a5ViByceUx2QhUMcoykQWtdY2F52QxaFbSGYNR/u+xsRfCNvAL1znRzzUQd01uVQx6ya89IbAluAdizgMvDWTwI0hdRDeLSFyDI/RkWoyb5eSypAZdd6dmZkuQXzjgknDrcRIK8gcOD3CsrL3jMbJN1QpN3JF4ntI4Hb9XPvmHBq4BYC5BkADvzVtjHZHkkRe7Ju8ZPYv6vIrHQz49QAS4A8kotjPCVZPGwu7ZDa722vdhGvYL80BmdMemc1nEPl1lYsrdna5lHyHAIkpfQ2XjN5IopBan+EzZrbsBXsl8ZAIkC9s5zRgTMEaCAiHsmllTwetkqfALQS3fqgnHKvmN3GRHHX7EIhQJQMaV/DqWHyFswzsTgOtDB4v4uS7NCw25Nzi53Ujwj2HgJU82o9fm9tp9ABvc84CJBM7F9GSws3J250ByT1I1pEpfZHdUCKqfhuKq+YcNlfUoC8YFvcdSNsr7OVm0QrbiVnt5AtEaAeQvfOgPINJl/j+YVUr7zi5g4ESOm2wwXfS/TdO6CyCCN80YqFUmosMQ0EiBEGaQJ5wc4uSe0t0XjbfhaWnf3RtJ2Rsltcap1bM+zRASmkzgz43rLWiTJy2cKftKZHN6Rt+4jVbp/n95A0Y5GYp5+Z70FCgIQZZJHwkQJk4Y/HlkxSBMIU2HK4hhBpMIcACdNH+7CzLFavrsFiK9k749L0S6MIhCmw9fAZIdJkDgESpI9lt+ApRJoJRcVZfiVhZjsQYTPVtx2vK+Mxsn9mq9WaEwI0ot343EN8yqWlBVu7kQt4du8+ia07jFoEmgVg4QfmpBMgC1Ca0uNsQquwLd/G1bKRHqbXK6mF2pofBTxLHuO0CVxWgKzEMlp8tBMA84FAJIHLCpBFxwbxiUxVrH1FAiwBsijqEqpFgc+c8rfOS7B1uWIJwKdIApcXoAx35hAXT1oiUxNr34EAW4CsuiCL7qcVQOohLjqeO5QAfIwkMCVA2iLkKT6RsLE2CIDAK4FpAcoilKfjvky24nsoSA4QAAFfAiIBKk2lbmvyGGxvfAON1UBgRQJqArSic7AJBEBgbQJ/AOoMmm0ZeBaqAAAAAElFTkSuQmCC);
+  width: calc(2 * 6 * 48px);
+  height: calc(2 * 48px);
+  background-size: calc(2 * 6 * 48px) calc(2 * 48px) !important;
+}
+
+.pup-widget__head-window {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: calc(2 * 31px);
+  height: calc(2 * 32px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pup-widget__head-flip {
+  position: absolute;
+  inset: 0;
+}
+
+.pup-widget__head {
+  position: absolute;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALoAAAAgCAYAAACl82LUAAAAAXNSR0IArs4c6QAAA+hJREFUeF7tmtuV1DAMhiddQSdQABS1FACdQFezx4cVR2h1+X1LnJXnaSbjRLfPkhz7eOzP9kACDxwJbNwmbg88bgP6y5dPz++//txG383WWh64BTgF8m8/fz9+fP382LCvBdBdtNmgN0Rqteqymj4NLp1+CwR6rSNrx3tWUjanMVdn9dWqy2r69BJbyw46PgRdOrL8towpbcVox3N5pX0pnwK7/F6u0Wdke0PyqXWydJghuzzT8rdm/0i7e4FtuX8ma1Wgk3M9IwjCEZlXZnMpl8viuhH0FHiCpQYEDjivJlKO9ImU3Rrwcl/kbz7hKQHU2Nii28x7OOiR7TzhIay5oGttg6fAKMdrkGkOtkC3xiIQeLI1+yx/IM6XeqJ2WxOPrh/HESawmcC2PHs2a6pDrJklA21lWBmImqBHWbwmu2r6ebCjstFAjrA78rmlSyTb6m21695Yq2VDe+ezWHsH+uhgczCjjFojuya7IjrUyEZBR9sJS3ZNxaqtYlo7Z12jtRePnwcy/RfBfqbP/wN9luCzQdMWqx50V9pd9JoFemQzB1iDU4Kq/S4yvAngVQOkD69JKnysrGgfHnQKtgwId8qVoEeQR/14BILVwnAAve/y+VpVlvej91wC+uxge1k9q2wkm7eCLquaBBTp0aOMTrpZE4Xs02TPhFxj7V9Gzwrbqna3LkK1iaFl9V7QqZ9vaV2u8PkG/e0cTdQCRP/T+3MvU8nXfl7Ae0H3+tXIltn/b9Ane9jKbCPKqAe6tWt7RcAnuxh6vLcuKQ+oiUfkd2qbUmV0bSPlTNi0Ml8TVIQiHnhvl9rrv2sWl1YLY/Xn5frz+VSPkSBVUfoguodingZ0bwNlFuzRTnGrXCu4vHLwszDRmxIJpda/I9fQxasFujWRNbuQSV/GvAPdm2noQ5Fx1vZ0a9ARmWXMFaCTXNJRA6426PyZ3vGDDfpfry+V0SmjjC7jfBJE5z9mTzTudK7XLLmUBa3daN5yyImIZG+tNUEzemSzthBHr3Hf8uS2zIbRTNijcx/knCgAaPXQxnkTrVeutRNsTa4I0lGge/6qeeNkHYXw3ky5O6MfDbYoq2mBoEw3qrqgOvTKlX17NLnRxShPAlavb7Vm1rt6JLFYfTnSr2u2m6cXizIjgo0GWpbzHvktMiX0PeBZrxORitAjl/fv0QE6RJczxvTaK1uV8luzPTyP3mtsj8PJCXT4CNWlR6aX5RH5I2VrfbSlw0i5iJ2jx1ivKb21BHUgVkXhOt7ugP5oB+/n5fDABj1HnNNbuUFPj0AOB2zQc8Q5vZUb9PQI5HDABj1HnNNbuUFPj0AOB7wCKr30XX1N2MUAAAAASUVORK5CYII=);
+  width: calc(2 * 6 * 31px);
+  height: calc(2 * 32px);
+  background-size: calc(2 * 6 * 31px) calc(2 * 32px) !important;
+}
+
+.pup-widget__head-flip.pup-happy {
+  animation: infinite 0.5s pup-pant;
+}
+.pup-widget__head-flip.pup-flip.pup-happy {
+  animation: infinite 0.5s pup-pant-flip;
+}
+@keyframes pup-pant {
+  0%, 100% { transform: translateY(-1px); }
+  50% { transform: translateY(1px); }
+}
+@keyframes pup-pant-flip {
+  0%, 100% { transform: translateY(-1px) scale(-1, 1); }
+  50% { transform: translateY(1px) scale(-1, 1); }
+}
+
+.pup-widget__tail-wrapper {
+  position: absolute;
+  width: calc(2 * 8px);
+  height: calc(2 * 8px);
+  transition: 0.15s;
+}
+
+.pup-widget__tail {
+  position: absolute;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAADZJREFUKFNjZICCWREW/2FsEJ224gQjiAYTIMnU5ceR5RlmR1qCFTFik4SpBCmihwKCjiTkTQB1sCqti9mJ/QAAAABJRU5ErkJggg==);
+  width: calc(2 * 8px);
+  height: calc(2 * 8px);
+  background-size: calc(2 * 8px) !important;
+}
+
+.pup-widget__leg.pup-walk-1 {
+  animation: infinite 0.4s pup-walking;
+  animation-delay: 0;
+}
+.pup-widget__leg.pup-walk-2 {
+  animation: infinite 0.4s pup-walking;
+  animation-delay: 0.2s;
+}
+@keyframes pup-walking {
+  0%, 100% { transform: translateY(-4px); }
+  50% { transform: translateY(0); }
+}
+
+.pup-widget__tail.pup-wag {
+  animation: infinite 0.5s pup-wag;
+}
+@keyframes pup-wag {
+  0%, 100% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+}
+
+.pup-widget__body-flip.pup-flip,
+.pup-widget__head-flip.pup-flip {
+  transform: scale(-1, 1);
+}

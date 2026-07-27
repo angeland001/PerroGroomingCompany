@@ -1,0 +1,63 @@
+@import "./tokens/typography.css";
+@import "./tokens/colors.css";
+@import "./tokens/radius.css";
+@import "./tokens/spacing.css";
+@import "./tokens/shadows.css";
+@import "./tokens/base.css";
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+}
+
+.section-eyebrow {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-rose-600);
+}
+
+.icon-circle {
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-narrow {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Shared "colored wash header" layout used by Services/Gallery/About/Contact */
+.page-hero {
+  position: relative;
+  padding: 56px;
+  overflow: hidden;
+}
+.page-hero__wash {
+  position: absolute;
+  inset: 0;
+}
+.page-hero__content {
+  position: relative;
+}

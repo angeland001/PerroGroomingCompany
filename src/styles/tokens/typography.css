@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Typography tokens — Botanica Design System
+   Headings: Poppins · Body: Lora (serif) · Display: Spectral (Canela stand-in)
+
+   Note: the design handoff bundle referenced self-hosted Poppins TTFs that
+   were not included in the asset bundle. Loading all three families from
+   Google Fonts here instead — swap for self-hosted files if/when licensed.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+
+:root {
+  /* Font families */
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Lora", ui-serif, Georgia, serif;
+  /* Canela was requested for display headings but is a paid Commercial Type
+     license — no webfont files were supplied, so it can't be shipped here.
+     Spectral is substituted (closest free match: similar flared-serif warmth
+     and display-weight italics). Swap this token if real Canela files arrive. */
+  --font-display: "Spectral", "Lora", ui-serif, Georgia, serif;
+
+  /* Type scale — airy, large per brand ("headlines feel airy and grand") */
+  --text-xs: 0.8125rem;    /* 13px */
+  --text-sm: 0.9375rem;    /* 15px */
+  --text-base: 1.0625rem;  /* 17px */
+  --text-lg: 1.25rem;      /* 20px */
+  --text-xl: 1.5rem;       /* 24px */
+  --text-2xl: 1.875rem;    /* 30px */
+  --text-3xl: 2.375rem;    /* 38px */
+  --text-4xl: 3rem;        /* 48px */
+  --text-5xl: 3.75rem;     /* 60px */
+  --text-6xl: 4.75rem;     /* 76px */
+  --text-7xl: 5.75rem;     /* 92px */
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-widest: 0.18em; /* uppercase button labels */
+
+  /* Semantic aliases */
+  --font-weight-heading: 700;
+  --font-weight-heading-medium: 600;
+  --font-weight-body: 400;
+  --font-weight-body-medium: 500;
+}

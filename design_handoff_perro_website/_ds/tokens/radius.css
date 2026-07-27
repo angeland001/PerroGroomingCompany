@@ -1,0 +1,9 @@
+/* Radius tokens — highly rounded, organic. Pills for buttons, arches for imagery. */
+:root {
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 24px;   /* standard card */
+  --radius-xl: 40px;   /* feature image blocks */
+  --radius-full: 999px; /* pills, buttons */
+  --radius-arch: 999px 999px 0 0; /* roman-arch top on images */
+}

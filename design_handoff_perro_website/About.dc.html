@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/typography.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/colors.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/radius.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/tokens/base.css">
+<link rel="stylesheet" href="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/styles.css">
+<script src="_ds/botanica-design-system-48062c73-f4b3-4f3e-b864-6c4178e4b798/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>html{scroll-behavior:smooth}body{margin:0;background:var(--surface-background)}a{color:var(--color-rose-600)}a:hover{color:#C01D58}</style>
+</helmet>
+<div style="position:relative;min-height:100vh;font-family:var(--font-body)" data-screen-label="About">
+<div class="grain-overlay" style="position:fixed;inset:0;pointer-events:none;z-index:60"></div>
+<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 40px;background:var(--surface-card);box-shadow:var(--shadow-sm)">
+  <a href="Home.dc.html" style="flex-shrink:0;transition:transform .3s cubic-bezier(0.22,1,0.36,1)" style-hover="transform:scale(0.96)"><img src="assets/perro-logo-horizontal.png" alt="Perro Grooming Co. — home" style="height:58px;width:auto;display:block"></a>
+  <nav style="display:flex;gap:26px;flex-wrap:wrap;font-family:var(--font-heading);font-weight:500;font-size:var(--text-sm)">
+    <a href="Home.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Home</a>
+    <a href="Services.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Services</a>
+    <a href="Gallery.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Gallery</a>
+    <a href="About.dc.html" style="color:var(--text-foreground);text-decoration:none;border-bottom:2px solid var(--color-rose-600);padding-bottom:2px">About</a>
+    <a href="Contact.dc.html" style="color:var(--text-secondary);text-decoration:none" style-hover="color:var(--color-rose-600)">Contact</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+    <a href="tel:+14235550134" style="border:1px solid var(--border-default);border-radius:var(--radius-full);padding:10px 20px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground);text-decoration:none;white-space:nowrap" style-hover="border-color:var(--color-rose-600);color:var(--color-rose-600)">(423) 555-0134</a>
+    <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="primary" size="md" hint-size="120px,44px">Book Now</x-import></a>
+  </div>
+</header>
+<div style="position:relative;padding:56px;overflow:hidden">
+  <div style="position:absolute;inset:0;background:var(--color-amber-400);opacity:0.16"></div>
+  <div style="position:relative;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:48px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">About Perro</span>
+      <h1 style="font-family:var(--font-display);font-size:var(--text-5xl);color:var(--text-foreground);margin:0;font-weight:500;line-height:var(--leading-tight)">Grooming that comes <i style="color:var(--color-orange-500)">wagging to your door</i></h1>
+      <p style="font-size:var(--text-base);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Perro Grooming Co. was started with one simple belief: dogs are calmer, happier and easier to groom in the place they know best — home. So instead of a shop full of kennels and dryers, we bring professional tools, warm water and a whole lot of patience to your porch, backyard or living room, anywhere in greater Chattanooga.</p>
+      <p style="font-size:var(--text-base);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Every visit is one-on-one from hello to final fluff. No cages, no waiting rooms, no car-ride anxiety — just your dog, their groomer, and a fresh cut.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="primary" size="lg" hint-size="200px,52px">Book a Visit</x-import></a>
+        <a href="Gallery.dc.html" style="text-decoration:none"><x-import component-from-global-scope="BotanicaDesignSystem_48062c.Button" variant="secondary" size="lg" hint-size="170px,52px">See Our Work</x-import></a>
+      </div>
+    </div>
+    <div style="position:relative;min-width:0">
+      <div style="width:100%;aspect-ratio:4/5;border-radius:var(--radius-arch);overflow:hidden;box-shadow:var(--shadow-xl)"><image-slot id="about-groomer" shape="rect" placeholder="Photo of your groomer at work"></image-slot></div>
+      <span style="position:absolute;bottom:18px;left:-14px;background:var(--surface-card);box-shadow:var(--shadow-md);border-radius:var(--radius-full);padding:12px 20px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);color:var(--text-foreground)">Certified · Insured · Dog-obsessed</span>
+    </div>
+  </div>
+</div>
+<div style="padding:72px 56px;background:var(--surface-card)" data-screen-label="What to expect">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;margin-bottom:44px">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">What to Expect</span>
+      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);color:var(--text-foreground);margin:0;font-weight:500">A visit in <i style="color:var(--color-orange-500)">four easy steps</i></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+      <div style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600);font-style:italic">1</span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">Book online or call</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Pick a service and time on Square Go, or call and we'll match the right groom to your dog's coat.</p>
+      </div>
+      <div style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600);font-style:italic">2</span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">We arrive, fully equipped</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Tub, warm water, dryer, table and tools all come with us. We set up indoors or in the backyard — your call.</p>
+      </div>
+      <div style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600);font-style:italic">3</span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">One-on-one groom</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">Your dog gets undivided attention at their own pace — breaks, treats and gentle handling throughout.</p>
+      </div>
+      <div style="background:var(--surface-muted);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600);font-style:italic">4</span>
+        <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--text-foreground);margin:0">Photos &amp; report card</h3>
+        <p style="font-size:var(--text-sm);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">You get glamour shots, notes on coat and nails, and we tidy up before we go. Tail wags guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="padding:72px 56px" data-screen-label="Promise">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-rose-600)">Our Promise</span>
+      <h2 style="font-family:var(--font-display);font-size:var(--text-4xl);color:var(--text-foreground);margin:0;font-weight:500;line-height:var(--leading-tight)">Treated like <i style="color:var(--color-orange-500)">family</i>, every time</h2>
+      <p style="font-size:var(--text-base);color:var(--text-secondary);margin:0;line-height:var(--leading-relaxed)">We use gentle, dog-safe products, never rush a nervous pup, and always leave your space as clean as we found it. If anything about the groom isn't right, tell us within 48 hours and we'll come back and fix it — free.</p>
+      <p style="font-size:var(--text-sm);color:var(--text-muted);margin:0;font-style:italic">Read what dog parents say on the <a href="Home.dc.html">home page</a>, or follow the fresh cuts on <a href="https://instagram.com/perrogroomingco" target="_blank" rel="noopener">Instagram</a>.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;text-align:center;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600)">120+</span><span style="font-size:var(--text-sm);color:var(--text-secondary)">five-star reviews</span></div>
+      <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;text-align:center;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600)">4</span><span style="font-size:var(--text-sm);color:var(--text-secondary)">neighborhoods served</span></div>
+      <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;text-align:center;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600)">1:1</span><span style="font-size:var(--text-sm);color:var(--text-secondary)">groomer to dog, always</span></div>
+      <div style="background:var(--surface-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;text-align:center;display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-rose-600)">0</span><span style="font-size:var(--text-sm);color:var(--text-secondary)">cages or kennels</span></div>
+    </div>
+  </div>
+</div>
+<div style="padding:0 56px 72px">
+  <div style="max-width:1100px;margin:0 auto;position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--color-rose-600);padding:44px 56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;box-shadow:var(--shadow-lg)">
+    <div><h2 style="font-family:var(--font-display);font-size:var(--text-3xl);color:#fff;margin:0 0 6px;font-weight:500">Let's meet your dog</h2><p style="font-size:var(--text-base);color:rgba(255,255,255,.9);margin:0">Book a first visit — puppy grooms are our specialty.</p></div>
+    <a href="https://book.squareup.com" target="_blank" rel="noopener" style="text-decoration:none;background:#fff;color:var(--color-rose-600);border-radius:var(--radius-full);padding:14px 30px;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm);letter-spacing:.08em;text-transform:uppercase" style-hover="transform:translateY(-1px)">Book on Square Go</a>
+  </div>
+</div>
+<footer style="background:var(--text-foreground);color:var(--surface-background);padding:56px 56px 28px">
+  <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <p style="font-family:var(--font-display);font-size:var(--text-2xl);margin:0;line-height:1.1">Perro<br><span style="font-size:var(--text-base);letter-spacing:.14em;text-transform:uppercase;font-family:var(--font-heading);font-weight:600;color:var(--color-amber-400)">Grooming Co.</span></p>
+      <p style="font-size:var(--text-sm);color:rgba(255,246,235,.7);margin:0;line-height:var(--leading-relaxed)">Mobile dog grooming across greater Chattanooga — right where your dog feels happiest.</p>
+      <a href="https://instagram.com/perrogroomingco" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:var(--color-amber-400);text-decoration:none;font-family:var(--font-heading);font-weight:600;font-size:var(--text-sm)" style-hover="color:var(--color-gold-300)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg>@perrogroomingco</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Explore</p>
+      <a href="Home.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Home</a>
+      <a href="Services.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Services &amp; Pricing</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Gallery</a>
+      <a href="About.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">About</a>
+      <a href="Contact.dc.html" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">Contact &amp; Areas</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Hours</p>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:var(--text-sm);color:rgba(255,246,235,.85)"><span>Mon – Fri</span><span>8:00 am – 6:00 pm</span><span>Saturday</span><span>9:00 am – 4:00 pm</span><span>Sunday</span><span style="font-style:italic">Closed</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--color-amber-400);margin:0 0 4px">Service Area</p>
+      <p style="font-size:var(--text-sm);color:rgba(255,246,235,.85);margin:0;line-height:var(--leading-relaxed)">Chattanooga · Hixson · Red Bank<br>Hamilton (+$15 travel fee)<br><i>Outside these areas? A travel fee applies — call us.</i></p>
+      <a href="tel:+14235550134" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">(423) 555-0134</a>
+      <a href="mailto:hello@perrogrooming.co" style="color:rgba(255,246,235,.85);text-decoration:none;font-size:var(--text-sm)" style-hover="color:#fff">hello@perrogrooming.co</a>
+    </div>
+  </div>
+  <p style="max-width:1160px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(255,246,235,.15);font-size:var(--text-xs);color:rgba(255,246,235,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>© 2026 Perro Grooming Co. · Chattanooga, TN</span><span>Booking powered by Square Go</span></p>
+</footer>
+</div>
+</x-dc>
+</body>
+</html>

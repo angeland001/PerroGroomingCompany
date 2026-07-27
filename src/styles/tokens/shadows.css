@@ -1,0 +1,14 @@
+/* Shadow tokens — very soft, diffused, warm-tinted (never pure black). */
+:root {
+  --shadow-sm: 0 4px 6px -1px rgba(43, 29, 27, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(43, 29, 27, 0.06);
+  --shadow-lg: 0 20px 40px -10px rgba(43, 29, 27, 0.08);
+  --shadow-xl: 0 25px 50px -12px rgba(43, 29, 27, 0.15);
+  --shadow-glow-primary: 0 8px 24px -6px rgba(219, 34, 101, 0.35);
+
+  --ease-organic: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 300ms;
+  --duration-standard: 500ms;
+  --duration-slow: 700ms;
+  --duration-slower: 1000ms;
+}

@@ -1,0 +1,77 @@
+.not-found__body {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 40px;
+  overflow: hidden;
+}
+.not-found__wash {
+  position: absolute;
+  inset: 0;
+  background: var(--color-gold-300);
+  opacity: 0.2;
+}
+.not-found__content {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  max-width: 560px;
+}
+.not-found__medallion {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-full);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.not-found__medallion img {
+  width: 118px;
+  height: auto;
+}
+.not-found__eyebrow {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-rose-600);
+  margin: 0;
+}
+.not-found__content h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  color: var(--text-foreground);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  margin: 0;
+}
+.not-found__content h1 i {
+  color: var(--color-orange-500);
+}
+.not-found__content > p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+.not-found__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.not-found__links {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+  font-style: italic;
+}

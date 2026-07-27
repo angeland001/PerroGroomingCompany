@@ -1,0 +1,99 @@
+.site-footer {
+  background: var(--text-foreground);
+  color: var(--surface-background);
+  padding: 56px 56px 28px;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.site-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-footer__brand {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  margin: 0 0 2px;
+  line-height: 1.1;
+}
+.site-footer__brand span {
+  font-size: var(--text-base);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-amber-400);
+}
+
+.site-footer__blurb {
+  font-size: var(--text-sm);
+  color: rgba(255, 246, 235, 0.7);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+.site-footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-amber-400);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+.site-footer__instagram:hover {
+  color: var(--color-gold-300);
+}
+
+.site-footer__heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-amber-400);
+  margin: 0 0 4px;
+}
+
+.site-footer__link {
+  color: rgba(255, 246, 235, 0.85);
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+.site-footer__link:hover {
+  color: #fff;
+}
+
+.site-footer__hours {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 18px;
+  font-size: var(--text-sm);
+  color: rgba(255, 246, 235, 0.85);
+}
+
+.site-footer__area {
+  font-size: var(--text-sm);
+  color: rgba(255, 246, 235, 0.85);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+.site-footer__bottom {
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 246, 235, 0.15);
+  font-size: var(--text-xs);
+  color: rgba(255, 246, 235, 0.5);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}

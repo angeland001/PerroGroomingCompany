@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Color tokens — Botanica Design System
+   Base palette: warm sunset gradient family, given as 4 blend pairs.
+   Neutrals (background/foreground/border) are derived in the same warm
+   hue family via oklch so nothing reads as a bolted-on gray.
+   ========================================================================== */
+
+:root {
+  /* ---- Base sunset ramp (brand-given) ---- */
+  --color-rose-600: #DB2265;
+  --color-coral-500: #FF5969;
+  --color-orange-500: #FF8840;
+  --color-amber-400: #FFBB63;
+  --color-gold-300: #FFDB99;
+
+  /* Gradient pairs as defined */
+  --gradient-rose-coral: linear-gradient(135deg, #DB2265, #FF5969);
+  --gradient-coral-orange: linear-gradient(135deg, #FF5969, #FF8840);
+  --gradient-orange-amber: linear-gradient(135deg, #FF8840, #FFBB63);
+  --gradient-amber-gold: linear-gradient(135deg, #FFBB63, #FFDB99);
+  --gradient-sunset-full: linear-gradient(135deg, #DB2265, #FF5969 25%, #FF8840 55%, #FFBB63 78%, #FFDB99);
+
+  /* ---- Derived warm neutrals (same hue family, low chroma) ---- */
+  --color-espresso-950: oklch(23% 0.035 25);   /* primary foreground / deep ink */
+  --color-espresso-800: oklch(33% 0.03 25);    /* secondary foreground */
+  --color-clay-600: oklch(50% 0.025 40);       /* muted foreground / captions */
+  --color-stone-300: oklch(88% 0.02 55);       /* borders, dividers */
+  --color-stone-200: oklch(92% 0.018 55);      /* subtle borders */
+  --color-linen-100: oklch(96.5% 0.014 60);    /* card / secondary surface */
+  --color-cream-50: oklch(98.5% 0.008 65);     /* page background */
+  --color-white: #FFFFFF;
+
+  /* ---- Semantic aliases ---- */
+  --surface-background: var(--color-cream-50);
+  --surface-card: var(--color-white);
+  --surface-muted: var(--color-linen-100);
+  --surface-sunken: var(--color-stone-200);
+
+  --text-foreground: var(--color-espresso-950);
+  --text-secondary: var(--color-espresso-800);
+  --text-muted: var(--color-clay-600);
+  --text-on-primary: var(--color-white);
+  --text-on-dark: var(--color-cream-50);
+
+  --border-default: var(--color-stone-300);
+  --border-subtle: var(--color-stone-200);
+  --border-strong: var(--color-clay-600);
+
+  --primary: var(--color-rose-600);
+  --primary-hover: #C01D58;
+  --primary-active: #A81A4C;
+
+  --accent: var(--color-orange-500);
+  --accent-soft: var(--color-gold-300);
+
+  --interactive: var(--color-coral-500);
+  --interactive-hover: var(--color-rose-600);
+
+  --focus-ring: var(--color-orange-500);
+
+  --status-success-bg: oklch(95% 0.05 120);
+  --status-success-fg: oklch(45% 0.12 140);
+  --status-warning-bg: oklch(95% 0.06 80);
+  --status-warning-fg: oklch(45% 0.14 55);
+  --status-error-bg: oklch(95% 0.03 20);
+  --status-error-fg: var(--color-rose-600);
+}
