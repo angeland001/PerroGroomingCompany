@@ -133,11 +133,12 @@ export default function PupWidget() {
       dogEl.style.top = px(point.y)
     }
 
+    const restFrame = ROTATE_FRAMES[DEFAULT_END][0]
     applyPosition(getStartPosition())
     positionLegs(DEFAULT_END)
     positionTail(DEFAULT_END)
-    if (headImgRef.current) headImgRef.current.style.transform = `translateX(${px(DEFAULT_END * -HEAD_FRAME_W)})`
-    if (bodyImgRef.current) bodyImgRef.current.style.transform = `translateX(${px(DEFAULT_END * -BODY_FRAME_W)})`
+    if (headImgRef.current) headImgRef.current.style.transform = `translateX(${px(restFrame * -HEAD_FRAME_W)})`
+    if (bodyImgRef.current) bodyImgRef.current.style.transform = `translateX(${px(restFrame * -BODY_FRAME_W)})`
 
     let resizeTimer: number | undefined
     const handleResize = () => {

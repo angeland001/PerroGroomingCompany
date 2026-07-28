@@ -336,7 +336,7 @@
   .hero__copy {
     align-items: center;
     text-align: center;
-    margin-top: 32px;
+    margin-top: 64px;
   }
   .hero__copy > p {
     max-width: none;
@@ -362,7 +362,13 @@
     margin-top: 28px;
   }
   .why-strip .why-strip__marquee-text {
-    font-size: clamp(2rem, 8vw, 2.75rem);
+    /* Text inside the curved SVG marquee is sized in the SVG's own user-unit
+       space (viewBox="0 0 1440 120"), which then gets scaled down by the
+       jacket's rendered width ÷ 1440 — so on a ~390px-wide phone a plain
+       "2.75rem" ends up only a few pixels tall on screen. A flat, much
+       larger value here already scales proportionally with viewport width
+       via that same transform, so no vw/clamp is needed. */
+    font-size: 9rem;
   }
 
   .section {
