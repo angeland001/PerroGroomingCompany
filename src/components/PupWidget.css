@@ -27,15 +27,6 @@
   }
 }
 
-/* Purely decorative cursor-chaser — on touch widths it has nothing to chase
-   and the layered sprite is prone to misalignment at small sizes/odd DPRs,
-   so it's simplest to just not show it there. */
-@media (max-width: 640px) {
-  .pup-widget {
-    display: none;
-  }
-}
-
 @keyframes pup-fade-in {
   0% { opacity: 0; }
   100% { opacity: 1; }

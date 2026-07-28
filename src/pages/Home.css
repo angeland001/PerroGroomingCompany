@@ -336,6 +336,7 @@
   .hero__copy {
     align-items: center;
     text-align: center;
+    margin-top: 32px;
   }
   .hero__copy > p {
     max-width: none;
@@ -359,6 +360,9 @@
   }
   .why-strip .curved-loop-jacket {
     margin-top: 28px;
+  }
+  .why-strip .why-strip__marquee-text {
+    font-size: clamp(2rem, 8vw, 2.75rem);
   }
 
   .section {
