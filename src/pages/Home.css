@@ -321,3 +321,56 @@
 .cta-section .container {
   max-width: 1160px;
 }
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 20px 40px;
+  }
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero__copy {
+    align-items: center;
+    text-align: center;
+  }
+  .hero__copy > p {
+    max-width: none;
+  }
+  .hero__actions {
+    justify-content: center;
+  }
+  .hero__quote {
+    max-width: none;
+  }
+  .hero__badge {
+    left: 12px;
+  }
+
+  .why-strip {
+    padding: 40px 20px 48px;
+  }
+  .why-strip__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .why-strip .curved-loop-jacket {
+    margin-top: 28px;
+  }
+
+  .section {
+    padding: 48px 20px;
+  }
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-teaser-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cta-section {
+    padding: 48px 20px;
+  }
+}
