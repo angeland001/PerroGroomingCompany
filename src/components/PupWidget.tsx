@@ -15,10 +15,6 @@ type Direction = 'clockwise' | 'anti-clockwise'
 type Frame = [number, string?]
 
 const ANGLES = [360, 45, 90, 135, 180, 225, 270, 315]
-const DIRECTION_NAMES: Record<number, string> = {
-  360: 'up', 45: 'upright', 90: 'right', 135: 'downright',
-  180: 'down', 225: 'downleft', 270: 'left', 315: 'upleft',
-}
 const ROTATE_FRAMES: Frame[] = [[0], [1], [2], [3], [5], [3, 'f'], [2, 'f'], [1, 'f']]
 const DEFAULT_END = 4 // ROTATE_FRAMES[4] === [5], the front-facing/"down" resting pose
 const DOG_SIZE = 96 // calc(2 * 48px)
