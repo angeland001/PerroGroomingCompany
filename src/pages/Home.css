@@ -330,6 +330,9 @@
     grid-template-columns: 1fr;
     gap: 36px;
   }
+  .hero__image-wrap {
+    order: -1;
+  }
   .hero__copy {
     align-items: center;
     text-align: center;

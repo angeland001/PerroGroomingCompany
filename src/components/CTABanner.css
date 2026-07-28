@@ -98,4 +98,16 @@
   .cta-banner--split .cta-banner__actions {
     justify-content: center;
   }
+
+  .cta-banner--center {
+    padding: 40px 24px;
+  }
+  .cta-banner--center .cta-banner__actions {
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .cta-banner__book,
+  .cta-banner__call {
+    white-space: normal;
+  }
 }
