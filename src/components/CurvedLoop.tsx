@@ -24,9 +24,11 @@ export default function CurvedLoop({
     return (hasTrailing ? marqueeText.replace(/\s+$/, '') : marqueeText) + ' '
   }, [marqueeText])
 
+  const svgRef = useRef<SVGSVGElement>(null)
   const measureRef = useRef<SVGTextElement>(null)
   const textPathRef = useRef<SVGTextPathElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
+  const scaleRef = useRef(1)
   const [spacing, setSpacing] = useState(0)
   const [offset, setOffset] = useState(0)
   const uid = useId()
@@ -46,6 +48,22 @@ export default function CurvedLoop({
     if (measureRef.current) setSpacing(measureRef.current.getComputedTextLength())
   }, [text, className])
 
+  // The <svg> maps its 1440-wide viewBox onto whatever width it actually
+  // renders at, so a fixed startOffset delta per frame ends up moving fewer
+  // real screen pixels on a narrow phone than on a wide desktop section.
+  // Track that scale so the animation speed reads the same on any screen.
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+    const updateScale = () => {
+      scaleRef.current = svg.getBoundingClientRect().width / 1440 || 1
+    }
+    updateScale()
+    const ro = new ResizeObserver(updateScale)
+    ro.observe(svg)
+    return () => ro.disconnect()
+  }, [])
+
   useEffect(() => {
     if (!spacing) return
     if (textPathRef.current) {
@@ -60,7 +78,8 @@ export default function CurvedLoop({
     let frame = 0
     const step = () => {
       if (!dragRef.current && textPathRef.current) {
-        const delta = dirRef.current === 'right' ? speed : -speed
+        const perceivedSpeed = speed / scaleRef.current
+        const delta = dirRef.current === 'right' ? perceivedSpeed : -perceivedSpeed
         const currentOffset = parseFloat(textPathRef.current.getAttribute('startOffset') || '0')
         let newOffset = currentOffset + delta
 
@@ -119,7 +138,7 @@ export default function CurvedLoop({
       onPointerUp={endDrag}
       onPointerLeave={endDrag}
     >
-      <svg className="curved-loop-svg" viewBox="0 0 1440 120">
+      <svg ref={svgRef} className="curved-loop-svg" viewBox="0 0 1440 120">
         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
           {text}
         </text>
